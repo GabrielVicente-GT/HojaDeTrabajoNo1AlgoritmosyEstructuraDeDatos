@@ -1,0 +1,80 @@
+public class Radio{
+
+    private Boolean Type;
+    private Boolean isOn;
+    private Integer number;
+
+    public Radio(Boolean type, Boolean isOn, Integer number) {
+        Type = type;
+        this.isOn = isOn;
+        this.number = number;
+    }
+
+    public String isType() {
+        if(Type == true){
+            return "Am";
+        }else{
+            return "Fm";
+        }
+    }
+
+    public Boolean getType() {
+        return Type;
+    }
+
+    public Boolean getOn() {
+        return isOn;
+    }
+
+    public void setType(boolean type) {
+        Type = type;
+    }
+
+    public Integer getNumber() {
+        return number;
+    }
+
+    public void setNumber(Integer number) {
+        this.number = number;
+    }
+
+    public Integer ChangeRadioNum(){
+        Integer NewCurr = number + 10;
+        number = NewCurr;
+        if(NewCurr > 1610){
+            NewCurr = 530;
+            number  = NewCurr;
+            return number;
+        }else{
+            return number;
+        }
+    }
+
+    public Boolean ChangeRadioType(){
+        if (Type == true){
+            Type = false;
+            return Type;
+        }else{
+            Type = true;
+            return Type;
+        }
+    }
+
+    public boolean ON(){
+        if(isOn == false){
+            isOn = true;
+            return isOn;
+        }else{
+            return isOn;
+        }
+    }
+
+    public boolean OFF(){
+        if(isOn == true){
+            isOn = false;
+            return isOn;
+        }else{
+            return isOn;
+        }
+    }
+}

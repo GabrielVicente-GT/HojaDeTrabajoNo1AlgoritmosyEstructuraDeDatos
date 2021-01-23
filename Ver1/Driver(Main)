@@ -1,0 +1,458 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public abstract class Main {
+
+    public static void main(String[] args) {
+
+        Radio Radio = new Radio(true,false,530);
+
+        Radio Button1 = new Radio(null,null,null);
+        Radio Button2 = new Radio(null,null,null);
+        Radio Button3 = new Radio(null,null,null);
+        Radio Button4 = new Radio(null,null,null);
+        Radio Button5 = new Radio(null,null,null);
+        Radio Button6 = new Radio(null,null,null);
+        Radio Button7 = new Radio(null,null,null);
+        Radio Button8 = new Radio(null,null,null);
+        Radio Button9 = new Radio(null,null,null);
+        Radio Button10 = new Radio(null,null,null);
+        Radio Button11 = new Radio(null,null,null);
+        Radio Button12 = new Radio(null,null,null);
+
+        Scanner sn2 = new Scanner(System.in);
+
+        boolean Salir2 = false;
+        int opcion2;
+
+        while (!Salir2) {
+            System.out.println("\nIntroduce the action you wish to proceed!\n\n" +
+                    "1. Prender la radio!\n" +
+                    "2. Cambiar el tipo de radio!\n" +
+                    "3. Avanzar el dial de la emisora!\n" +
+                    "4. Guardar una emisora (12)!\n" +
+                    "5. Escojer una emisora favorita!\n" +
+                    "6. Apagar la radio!\n" +
+                    "7. Exit!");
+
+            try {
+                System.out.println("Introduce the number of the option you wish to proceed!");
+
+                opcion2 = sn2.nextInt();
+                switch (opcion2) {
+                    case 1:
+                        if(Radio.getOn() == false){
+                            System.out.println("Se ha prendido la Radio");
+                            Radio.ON();
+                        }else{
+                            System.out.println("La radio ya estaba prendida");
+                        }
+                        break;
+                    case 2:
+
+                        if(Radio.getOn() == true){
+                            System.out.println("La radio estaba en " + Radio.getNumber() + " " + Radio.isType());
+                            Radio.ChangeRadioType();
+                            System.out.println("Ha cambiado a " + Radio.getNumber() + " " + Radio.isType());
+                        }else{
+                            System.out.println("La radio no esta prendida aun");
+                        }
+
+                        break;
+                    case 3:
+
+                        if(Radio.getOn() == true){
+                            System.out.println("La emisora estaba en " + Radio.getNumber() + " " + Radio.isType());
+                            System.out.println("Ahora cambio a " + Radio.ChangeRadioNum() + " " + Radio.isType());
+                        }else{
+                            System.out.println("La radio no esta prendida aun");
+                        }
+
+                        break;
+                    case 4:
+
+                        if(Radio.getOn() == true){
+                            Scanner sn = new Scanner(System.in);
+
+                            boolean Salir = false;
+                            int opcion;
+
+                            while (!Salir) {
+                                try {
+                                    System.out.println("Introduce the number you wish to activate!");
+
+                                    opcion = sn.nextInt();
+                                    switch (opcion) {
+                                        case 1:
+
+                                            Button1.setNumber(Radio.getNumber());
+                                            Button1.setType(Radio.getType());
+                                            System.out.println("Number one has been activated!\n" +
+                                                    "It now stores " + Button1.getNumber() + Button1.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 2:
+
+                                            Button2.setNumber(Radio.getNumber());
+                                            Button2.setType(Radio.getType());
+                                            System.out.println("Number two has been activated!\n" +
+                                                    "It now stores " + Button2.getNumber() + Button2.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 3:
+
+                                            Button3.setNumber(Radio.getNumber());
+                                            Button3.setType(Radio.getType());
+                                            System.out.println("Number three has been activated!\n" +
+                                                    "It now stores " + Button3.getNumber() + Button3.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 4:
+
+                                            Button4.setNumber(Radio.getNumber());
+                                            Button4.setType(Radio.getType());
+                                            System.out.println("Number four has been activated!\n" +
+                                                    "It now stores " + Button4.getNumber() + Button4.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 5:
+
+                                            Button5.setNumber(Radio.getNumber());
+                                            Button5.setType(Radio.getType());
+                                            System.out.println("Number five has been activated!\n" +
+                                                    "It now stores " + Button5.getNumber() + Button5.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 6:
+
+                                            Button6.setNumber(Radio.getNumber());
+                                            Button6.setType(Radio.getType());
+                                            System.out.println("Number six has been activated!\n" +
+                                                    "It now stores " + Button6.getNumber() + Button6.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 7:
+
+                                            Button7.setNumber(Radio.getNumber());
+                                            Button7.setType(Radio.getType());
+                                            System.out.println("Number seven has been activated!\n" +
+                                                    "It now stores " + Button7.getNumber() + Button7.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 8:
+
+                                            Button8.setNumber(Radio.getNumber());
+                                            Button8.setType(Radio.getType());
+                                            System.out.println("Number eight has been activated!\n" +
+                                                    "It now stores " + Button8.getNumber() + Button8.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 9:
+
+                                            Button9.setNumber(Radio.getNumber());
+                                            Button9.setType(Radio.getType());
+                                            System.out.println("Number nine has been activated!\n" +
+                                                    "It now stores " + Button9.getNumber() + Button9.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 10:
+
+                                            Button10.setNumber(Radio.getNumber());
+                                            Button10.setType(Radio.getType());
+                                            System.out.println("Number ten has been activated!\n" +
+                                                    "It now stores " + Button10.getNumber() + Button10.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 11:
+
+                                            Button11.setNumber(Radio.getNumber());
+                                            Button11.setType(Radio.getType());
+                                            System.out.println("Number eleven has been activated!\n" +
+                                                    "It now stores " + Button11.getNumber() + Button11.isType());
+                                            Salir = true;
+
+                                            break;
+                                        case 12:
+
+                                            Button12.setNumber(Radio.getNumber());
+                                            Button12.setType(Radio.getType());
+                                            System.out.println("Number twelve has been activated!\n" +
+                                                    "It now stores " + Button12.getNumber() + Button12.isType());
+                                            Salir = true;
+
+                                            break;
+                                        default:
+                                            System.out.println("That is not an option!");
+                                            break;
+
+                                    }
+                                } catch (InputMismatchException a) {
+                                    System.out.println("You must introduce a number!");
+                                    sn.next();
+                                }
+                            }
+                        }else{
+                            System.out.println("La radio no esta prendida aun");
+                        }
+
+                        break;
+                    case 5:
+
+                        if(Radio.getOn() == true){
+                            Scanner sn = new Scanner(System.in);
+
+                            boolean Salir = false;
+                            int opcion;
+
+                            while (!Salir) {
+                                try {
+                                    System.out.println("Introduce the number you wish to go to!");
+
+                                    opcion = sn.nextInt();
+                                    switch (opcion) {
+                                        case 1:
+
+                                            if(!(Button1.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button1.getNumber());
+                                                Radio.setType(Button1.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+                                            break;
+                                        case 2:
+
+
+                                            if(!(Button2.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button2.getNumber());
+                                                Radio.setType(Button2.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+                                            break;
+                                        case 3:
+
+                                            if(!(Button3.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button3.getNumber());
+                                                Radio.setType(Button3.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+                                            break;
+                                        case 4:
+
+                                            if(!(Button4.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button4.getNumber());
+                                                Radio.setType(Button4.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+                                            break;
+                                        case 5:
+
+
+                                            if(!(Button5.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button5.getNumber());
+                                                Radio.setType(Button5.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+
+                                            break;
+                                        case 6:
+
+
+                                            if(!(Button6.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button6.getNumber());
+                                                Radio.setType(Button6.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+
+                                            break;
+                                        case 7:
+
+                                            if(!(Button7.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button7.getNumber());
+                                                Radio.setType(Button7.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+
+                                            break;
+                                        case 8:
+
+                                            if(!(Button8.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button8.getNumber());
+                                                Radio.setType(Button8.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+
+                                            break;
+                                        case 9:
+
+
+                                            if(!(Button9.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button9.getNumber());
+                                                Radio.setType(Button9.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+
+                                            break;
+                                        case 10:
+
+
+                                            if(!(Button10.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button10.getNumber());
+                                                Radio.setType(Button10.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+
+                                            break;
+                                        case 11:
+
+
+                                            if(!(Button11.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button11.getNumber());
+                                                Radio.setType(Button11.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+
+                                            break;
+                                        case 12:
+
+
+                                            if(!(Button12.getNumber() == null)){
+                                                System.out.println("La radio estaba en " + Radio.getNumber() + Radio.isType());
+
+                                                Radio.setNumber(Button12.getNumber());
+                                                Radio.setType(Button12.getType());
+
+                                                System.out.println("Ahora esta en " + Radio.getNumber() + Radio.isType());
+                                            }else{
+                                                System.out.println("Este numero no esta activado");
+                                            }
+                                            Salir = true;
+
+
+                                            break;
+                                        default:
+                                            System.out.println("That is not an option!");
+                                            break;
+
+                                    }
+                                } catch (InputMismatchException a) {
+                                    System.out.println("You must introduce a number!");
+                                    sn.next();
+                                }
+                            }
+                        }else{
+                            System.out.println("La radio no esta prendida aun");
+                        }
+
+                        break;
+                    case 6:
+
+                        if(Radio.getOn() == false){
+                            System.out.println("La radio ya estaba apagada");
+                        }else{
+                            System.out.println("La radio se ha apagado");
+                            Radio.OFF();
+                        }
+
+                        break;
+                    case 7:
+                        Salir2 = true;
+                        break;
+
+                    default:
+                        System.out.println("That is not an option!");
+                        break;
+
+                }
+            } catch (InputMismatchException a) {
+                System.out.println("You must introduce a number!");
+                sn2.next();
+            }
+        }
+    }
+}
